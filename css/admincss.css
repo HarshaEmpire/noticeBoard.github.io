@@ -1,0 +1,112 @@
+body{
+    width:100%;
+    background-image: url(../images/pic2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 40px;
+}
+.a{
+    text-align: center;
+}
+.b{
+    text-align: left;
+    border-color: black;
+    border-width: 10px;
+    border-style: double;
+    background-color: transparent;
+    color: red;
+    font-size: 25px;
+    padding: 1%;
+    margin: 0%;
+}
+.asd{
+    font-size: 25px;
+    color:black;
+}
+.asd input{
+    margin-bottom: 10px;
+    width:40%;
+}
+.asd input[type="text"]
+{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: red;
+    font-size: 25px;
+}
+.asd input[type="password"]
+{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: red;
+    font-size: 25px;
+}
+.asd input[type="submit"]
+{
+    border:none;
+    outline:none;
+    height: 60px;
+    width: 20%;
+    color: darkred;
+    font-size: 20px;
+    background-color:white;
+    cursor:pointer;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 5px;
+}
+.asd input[type="submit"]:hover{
+    background: #efed40;
+}
+.p{
+    font-size: 80px;
+    color: black;
+}
+hr{
+    background-color: black;
+    color: black;
+}
+p{
+    color: black;
+}
+.zxc{
+    width:20%;
+    border-width: 2px;
+    border-style: groove;
+    border-color:black
+}
+.foo{
+    cursor: pointer;
+    color:white;
+    border-width: 20px;
+    border-color: black;
+}
+.b1{
+    cursor: pointer;
+    width: 20px;
+}
+.aqs{
+    position:absolute;
+    top:40px;
+    left:90%;
+    border-radius: 20%;
+
+}
+.p1{
+    text-align:center;
+}
+.qzs{
+    height:52px;
+    font-size:20px;
+    border-width: 4px;
+    border-color: black;
+    color:black;
+    background-color: transparent;
+ 
+}

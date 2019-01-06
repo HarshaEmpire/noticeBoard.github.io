@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>notice-board</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/web.css">
+  <script src="./javascripts/query.js"></script>
+  <script src="./javascripts/jquery.js"></script>
+  <script>
+    function func(){
+        $.get("http://localhost:3000/api/loading/",(data,status)=>{
+            let a=[0,0,0,0,0,0];
+            for(let x=0;x<data.length;x++){
+                a[parseInt(data[x].notice_id)-1]=1;
+                
+            }
+            for(let i=0;i<6;i++){
+                if(a[i]==0){
+                    let idd=".bt"+(i+1);
+                    $(idd).prop("disabled",true);
+                }
+            }
+        });
+    }
+
+  </script>
+</head>
+<body onload="func()">
+    
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col-lg-2">
+                <img src="./images/pic5.jpg" class="img-responsive asd"/>
+            </div>
+
+            <div class="col-lg-9">
+                <p>MOTILAL NATIONAL INSTITUTE OF TECHNOLOGY</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-default">
+                    <button type="button" class="navbar-toggle" data-target="#main" data-toggle="collapse">
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse collapse navbar-nav-justified " id="main">
+                        <ul class="nav nav-pills nav-justified">
+                                <li class="active"><a href="http://localhost:3000/"><span class="glyphicon glyphicon-home" style="font-size: 20px; "></span><h4>Home</h4></a></li>
+                                <li><a href="http://localhost:3000/student_page/"><span class="glyphicon glyphicon-th-list" style="font-size: 20px; "></span><h4>Student Section</h4></a></li>
+                                <li><a href="http://localhost:3000/admin/"><span class="glyphicon glyphicon-user" style="font-size: 20px; "></span><h4 class="admins">Admin<h4></h4></a></li>
+                                <li><a href="http://localhost:3000/student/"><span class="glyphicon glyphicon-user" style="font-size: 20px; "></span><h4>Student Login</h4></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="qw">NOTICE BOARD</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 sac">
+                <br>
+                <div class="gre" id="n1"><button class="btn btn-default bt1" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 1</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+                <div class="gre" id="n2"><button class="btn btn-default bt2" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 2</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+                <div class="gre" id="n3"><button class="btn btn-default bt3" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 3</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+                <div class="gre" id="n4"><button class="btn btn-default bt4" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 4</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+                <div class="gre" id="n5"><button class="btn btn-default bt5" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 5</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+                <div class="gre" id="n6"><button class="btn btn-default bt6" style="width:100%;height:100%;border-radius:20px">
+                    <h1>Notice 6</h1></button>
+                </div>
+                <hr class="bla">
+                <br>
+
+            </div>
+            <div class="col-lg-8 sac namez">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5> QUICK LINKS</h5>
+                    <hr class="light">
+                    <h5><a href="http://www.mnnit.ac.in">MNNIT</a></h5>
+                    <h5><a href="https://academics.mnnit.ac.in">MNNIT ACADEMICS</a></h5>
+                    <h5><a href="https://www.vijayabank.com">VIJAYA BANK</a></h5>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5> MAINTAINED BY</h5>
+                    <hr class="light">
+                    <h4>Harsh Chaturvedi</h4>
+                    <h4>Sachin Kumar</h4>
+                    <h4>Rajat Kumar</h4>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5> CONTACT</h5>
+                    <hr class="light">
+                    <h4>888-888-888</h4>
+                    <h4>emailaddress@gmail.com</h4>
+                    <h4>teliarganj, allahabad</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                   
+                <center>    <hr class="light">
+                     <h3>&copy; mnnit.com</h3>
+                    </center>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

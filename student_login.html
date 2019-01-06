@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>student login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/admincss.css">
+  <script src="../javascripts/query.js"></script>
+  <script src="../javascripts/jquery.js"></script>
+    <script>
+          function fun_student(a){
+            $.post(`http://localhost:3000/api/del_student_notice?id=${a}`,(response,status)=>{
+                alert("notice deleted");
+            });
+        }
+  </script>
+</head>
+<body>
+        <center><div class="p">STUDENT</div></center>
+        <div class="container aqs">
+            <a href="http://localhost:3000/student/"><button type="button" class="btn btn-default btn-lg">logout</button></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><center>enter the notice slot</center></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="p1">
+                        <textarea cols="10px" class="qzs" id="s_id"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <center>enter the notice that you want to issue</center>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <div class="a">
+                        <form>
+                            <textarea class="b" rows="10" cols="60px" id="textu"></textarea>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <center>
+                    <button type="button" class="btn btn-primary btn-lg" id="btnu">submit</button>
+                    </center>
+                </div>
+                <br>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <p>Delete the notice slot</p>
+
+                        </div>
+                        <div class="col-md-12">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle drop_student" type="button" data-toggle="dropdown">Select Notice
+                                        <span class="caret"></span></button>
+                                        <ul class="dropdown-menu ">
+                                            <center><div class="bell_student"></div></center>
+                                        </ul>
+                                </div>
+                        </div>
+                    </div>
+                
+        </div>
+        </div>
+    </body>
+</html>

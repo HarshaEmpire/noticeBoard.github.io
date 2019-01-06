@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>admin login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/admincss.css"/>
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/query.js"></script>
+  <script>
+          function fun(a){
+            $.post(`http://localhost:3000/api/delete_user?reg_no=${a}`,(response,status)=>{
+                alert("user deleted");
+            });
+        }
+  </script>
+</head>
+<body>
+        <center><div class="p">THE ADMIN</div></center>
+        <div class="container aqs">
+            <a href="http://localhost:3000/admin"><button type="button" class="btn btn-default btn-lg">logout</button></a>
+
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><center>Enter the notice slot</center></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="p1">
+                        <textarea cols="10px" class="qzs" id="notice_id"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <center>Enter the notice that you want to issue</center>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <div class="a">
+                            <textarea class="b" rows="10" cols="60px" id="texta"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <center>
+                    <button type="button" class="btn btn-primary btn-lg" id="btnl">submit</button>
+                    </center>
+                </div>
+                <br>
+                <div class="col-md-4">
+                    <div class="asd">
+                        <br>
+                                    <p>Enter registration number</p>
+                                    <input type="text" name="" placeholder="reg no" id="u1">
+                                    <p>Enter password</p>
+                                  <input type="password" name="" placeholder="password"  id="u2"> 
+                                  <br>
+                                  <br>
+                                  <button class="btn btn-default btn-lg" id="b1">activate</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="asd">
+                        <br>
+                        <p> deactivate users</p>
+                        <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle drops" type="button" data-toggle="dropdown">Select user
+                                        <span class="caret"></span></button>
+                                        <ul class="dropdown-menu ">
+                                            <center><div class="bells"></div></center>
+                                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <p>Delete the notice slot</p>
+                        </div>
+                        <div class="col-md-12">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle drop" type="button" data-toggle="dropdown">Select Notice
+                                        <span class="caret"></span></button>
+                                        <ul class="dropdown-menu ">
+                                            <center><div class="bell"></div></center>
+                                        </ul>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </body>
+</html>
